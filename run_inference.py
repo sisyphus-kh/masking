@@ -7,6 +7,7 @@ import torch  # PyTorch for loading the model and performing inference
 import pickle  # To load the model from a .pkl file
 import argparse  # For command-line argument parsing
 from model import UNet
+from osgeo import gdal, gdal_array
 
 # Import RLE encoding and decoding functions from the separate file
 from rle_encoder_decoder import rle_encode, rle_decode
