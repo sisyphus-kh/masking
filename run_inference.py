@@ -90,7 +90,7 @@ def main():
     args = parse_arguments()
     
     # Load the model from the .pkl file
-    model = UNet(output_channels=1)
+    model = UNet(1)
     model.load_state_dict(torch.load('/content/best_model.pkl'))
     
     # Load the test image paths
