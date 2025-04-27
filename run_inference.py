@@ -91,7 +91,7 @@ def main():
     
     # Load the model from the .pkl file
     model = UNet(1)
-    model.load_state_dict(torch.load('/content/best_model.pkl'))
+    model.load_state_dict(torch.load(args.model, map_location=args.device))
     
     # Load the test image paths
     image_paths = glob.glob(os.path.join(args.test_dir, '*.tif'))
