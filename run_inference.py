@@ -26,6 +26,7 @@ def convert_to_nparr(image_path):
 def load_image(image_path):
     img = convert_to_nparr(image_path)
     img = torch.from_numpy(img).float()  
+    img = img.unsqueeze(0)  
     return img
 
 def run_inference(model, image_paths, device):
